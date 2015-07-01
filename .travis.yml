@@ -12,7 +12,7 @@ before_install:
   - pwd
   - sudo chef-solo -c chef/travis.rb -j chef/travis.json
 sudo: required
-script: bundle exec rspec
+script: CODECLIMATE_REPO_TOKEN=fd83182b10f391fb9aa564f8723b564932612e0b228b35b9670eb9db89cafdda bundle exec rspec
 addons:
   code_climate:
     repo_token: dc49d9f8d95b29640fb0e2b9c8722862e3ece6141916c8b25b0bd0a9edaccd48
