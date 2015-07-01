@@ -1,3 +1,6 @@
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
+
 # Did we get executed via 'rake'?
 is_rake_exec = $0 =~ /\/rake/
 
@@ -15,8 +18,6 @@ require 'rspec'
 require 'bundler'
 require 'shoulda-matchers'
 require 'byebug'
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
 
 lib = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
