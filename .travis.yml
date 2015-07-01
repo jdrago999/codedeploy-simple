@@ -1,0 +1,18 @@
+---
+
+language: ruby
+rvm: 2.0.0
+before_install:
+  - gem install bundler --no-ri --no-rdoc
+  - gem install chef --no-ri --no-rdoc
+  - curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  - gem install librarian-chef --no-ri --no-rdoc
+  - cd chef && librarian-chef install && cd ../
+  - whoami
+  - pwd
+  - sudo chef-solo -c chef/travis.rb -j chef/travis.json
+sudo: required
+script: bundle exec rspec
+addons:
+  code_climate:
+    repo_token: dc49d9f8d95b29640fb0e2b9c8722862e3ece6141916c8b25b0bd0a9edaccd48

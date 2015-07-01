@@ -1,0 +1,11 @@
+.bundle
+.vagrant
+*.expanded.json
+chef/cookbooks
+chef/tmp
+coverage/
+.DS_Store
+.env
+.env.*
+*.gem
+

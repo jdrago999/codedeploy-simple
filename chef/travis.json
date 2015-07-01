@@ -1,0 +1,8 @@
+{
+  "run_list": "codedeploy::default",
+  "codedeploy": {
+    "user": "travis",
+    "home_dir": "/home/travis",
+    "installation_path": "/home/travis/build/jdrago999/codedeploy-simple"
+  }
+}

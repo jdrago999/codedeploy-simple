@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'trollop'
+require 'byebug'
+require 'dotenv'
+Dotenv.load
+lib = `pwd`.chomp << "/lib"
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'codedeploy'
+
+
+
