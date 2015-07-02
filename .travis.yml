@@ -4,8 +4,7 @@ language: ruby
 rvm: 2.0.0
 before_install:
   - gem install bundler --no-ri --no-rdoc
-  - gem install chef --no-ri --no-rdoc
-#  - curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  - curl -L https://www.opscode.com/chef/install.sh | sudo bash
   - gem install librarian-chef --no-ri --no-rdoc
   - cd chef && librarian-chef install && cd ../
   - whoami
