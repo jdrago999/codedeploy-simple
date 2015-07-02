@@ -1,0 +1,8 @@
+{
+  "run_list": "codedeploy::default",
+  "codedeploy": {
+    "user": "rof",
+    "home_dir": "/home/rof",
+    "installation_path": "/home/rof/clone"
+  }
+}
